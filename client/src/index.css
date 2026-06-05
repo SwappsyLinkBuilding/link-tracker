@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swappsy brand tokens — ported from the main app (orange + navy + off-white). */
+@layer base {
+  :root {
+    --background: 40 17% 98%;   /* off-white #FAFAF8 */
+    --foreground: 217 31% 15%;  /* navy #1B2433 */
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--foreground);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--foreground);
+
+    --primary: 28 100% 45%;     /* vibrant orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 70% 85%;
+    --secondary-foreground: 25 75% 10%;
+
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 30 20% 90%;
+    --muted-foreground: 30 20% 40%;
+
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 85%;
+    --input: 30 20% 85%;
+    --ring: 28 90% 55%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 25 30% 10%;
+    --foreground: 35 100% 85%;
+
+    --card: 25 30% 12%;
+    --card-foreground: var(--foreground);
+
+    --popover: 25 30% 12%;
+    --popover-foreground: var(--foreground);
+
+    --primary: 28 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 28 60% 30%;
+    --secondary-foreground: 35 100% 85%;
+
+    --accent: 35 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 30 10% 20%;
+    --muted-foreground: 30 20% 60%;
+
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 10% 25%;
+    --input: 30 10% 25%;
+    --ring: 28 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

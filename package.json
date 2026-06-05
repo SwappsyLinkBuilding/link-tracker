@@ -1,0 +1,23 @@
+{
+  "name": "swappsy-link-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Free, self-hostable tool to track exchanged links — the open-source companion to swappsy.net",
+  "license": "AGPL-3.0",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:client": "npm -w client run dev",
+    "dev:server": "npm -w server run dev",
+    "build": "npm -w client run build",
+    "start": "npm -w server run start",
+    "lint": "npm -w client run lint",
+    "test": "npm -w server run test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
